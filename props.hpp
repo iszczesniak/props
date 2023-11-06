@@ -87,43 +87,43 @@ operator << (std::ostream &os, const resources<Resources> &w)
 }
 
 // -------------------------------------------------------------------
-// index
+// key
 // -------------------------------------------------------------------
 
-template <typename Index>
-struct index
+template <typename Key>
+struct key
 {
-  using index_type = Index;
-  index_type m_index;
+  using key_type = Key;
+  key_type m_key;
 
-  index(const index_type &index): m_index(index)
+  key(const key_type &key): m_key(key)
   {
   }
 
-  constexpr auto operator <=> (const index &) const = default;
+  constexpr auto operator <=> (const key &) const = default;
 };
 
 // The non-const getter.
-template <typename Index>
+template <typename Key>
 auto &
-get_index(index<Index> &a)
+get_key(key<Key> &a)
 {
-  return a.m_index;
+  return a.m_key;
 }
 
 // The const getter.
-template <typename Index>
+template <typename Key>
 const auto &
-get_index(const index<Index> &a)
+get_key(const key<Key> &a)
 {
-  return a.m_index;
+  return a.m_key;
 }
 
-template <typename Index>
+template <typename Key>
 std::ostream &
-operator << (std::ostream &os, const index<Index> &w)
+operator << (std::ostream &os, const key<Key> &w)
 {
-  os << "index = " << w.m_index;
+  os << "key = " << w.m_key;
 
   return os;
 }
