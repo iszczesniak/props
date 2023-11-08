@@ -5,6 +5,9 @@
 
 // -------------------------------------------------------------------
 // weight
+//
+// Why not lenght or cost?  We have a weighted graph, Cormen uses
+// weight, and so does the Boost Graph Library.  Stay with weight.
 // -------------------------------------------------------------------
 
 template <typename Weight>
