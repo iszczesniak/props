@@ -16,7 +16,7 @@ struct weight
   using weight_type = Weight;
   weight_type m_weight;
 
-  weight(const weight_type &weight): m_weight(weight)
+  weight(const weight_type &weight = {}): m_weight(weight)
   {
   }
 
@@ -57,7 +57,7 @@ struct resources
 {
   Resources m_resources;
 
-  resources(const Resources &resources): m_resources(resources)
+  resources(const Resources &resources = {}): m_resources(resources)
   {
   }
 
@@ -99,7 +99,7 @@ struct key
   using key_type = Key;
   key_type m_key;
 
-  key(const key_type &key): m_key(key)
+  key(const key_type &key = {}): m_key(key)
   {
   }
 
@@ -140,7 +140,7 @@ struct name
 {
   Name m_name;
 
-  name(const Name &name): m_name(name)
+  name(const Name &name = {}): m_name(name)
   {
   }
 };
