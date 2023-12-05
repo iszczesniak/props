@@ -19,8 +19,6 @@ struct weight
   weight(const weight_type &weight = {}): m_weight(weight)
   {
   }
-
-  constexpr auto operator <=> (const weight &) const = default;
 };
 
 // The non-const getter.
@@ -60,8 +58,6 @@ struct resources
   resources(const Resources &resources = {}): m_resources(resources)
   {
   }
-
-  constexpr auto operator <=> (const resources &) const = default;
 };
 
 // The non-const getter.
@@ -102,8 +98,6 @@ struct key
   key(const key_type &key = {}): m_key(key)
   {
   }
-
-  constexpr auto operator <=> (const key &) const = default;
 };
 
 // The non-const getter.
