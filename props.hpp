@@ -61,7 +61,7 @@ struct resources
   {
   }
 
-  constexpr auto operator <=> (const resources &) const = default;
+  auto operator <=> (const resources &) const = default;
 };
 
 // The non-const getter.
