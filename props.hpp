@@ -1,6 +1,8 @@
 #ifndef PROPS_HPP
 #define PROPS_HPP
 
+#include "props_interface.hpp"
+
 #include <iostream>
 
 // -------------------------------------------------------------------
@@ -130,6 +132,15 @@ operator << (std::ostream &os, const key<Key> &w)
 
   return os;
 }
+
+// Work for later: how to make the code below compile?
+//
+// template <typename T, typename K>
+// requires std::derived_from<T, key<K>>
+// struct key_traits<T>
+// {
+//   using type = typename T::key_type;
+// };
 
 // -------------------------------------------------------------------
 // name
