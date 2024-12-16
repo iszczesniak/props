@@ -4,6 +4,7 @@
 #include "props_interface.hpp"
 
 #include <iostream>
+#include <utility>
 
 // -------------------------------------------------------------------
 // weight
@@ -59,7 +60,8 @@ struct resources
 {
   Resources m_resources;
 
-  resources(const Resources &resources = {}): m_resources(resources)
+  template <typename... P>
+  resources(P &&... p): m_resources(std::forward<P>(p)...)
   {
   }
 
